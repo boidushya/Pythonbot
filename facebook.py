@@ -23,7 +23,7 @@ access_token = ''
 #filling the facebook_page_id is optional but is suggested by some botmins...
 facebook_page_id = ''
  
-#A graph variable is initialised to do all the automation stuff!
+#A graph class is initialised to do all the automation stuff!
 graph = facebook.GraphAPI(access_token)
  
 #Change the message below to whatever you like but make sure its within quotes(either double or single)
