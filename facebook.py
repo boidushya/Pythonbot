@@ -32,7 +32,7 @@ msg = 'Hello facebook! This is my first bot made with Python!'
 """
 The put_photo function posts a photo to your facebook page. Previously you could just post text
 But thanks to facebook, you can't do that anymore. You NEED to post a picture with your text.
-This picture can be arbitary but some botmins made a 400*1 white image so that its not entirely necessary to put the picture at automatically
+This picture can be arbitary but some botmins made a 400*1 white image to attach with the post
 If you want the 400*1 image, go to : https://i.ibb.co/jLdj1ry/IMG-20190926-190753.jpg and download it to some folder and below, replace /path/to/photo/<name>.<extension> with the path to the picture
 For example if you saved the image to C:/downloads/pic.jpg, then next line would read as
 graph.put_photo(image = open('C:/downloads/pic.jpg', 'rb'), message= msg)
