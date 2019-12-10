@@ -85,7 +85,7 @@ access_token = '' #here goes your access token from http://maxbots.ddns.net/toke
 graph = facebook.GraphAPI(access_token)
 msg = 'Hello facebook! This is my first bot made with Python!' #message for the post
 comment_msg = 'This is a bot posted comment!' #message for the comment
-graph.put_photo(image = open('/path/to/photo/<name>.<extension>', 'rb'), message= msg) #photo got posted!
+post_id = graph.put_photo(image = open('/path/to/photo/<name>.<extension>', 'rb'), message= msg)["post_id"] #photo got posted!
 print('Photo has been uploaded to facebook!')
 graph.put_comment(object_id = post_id, message = comment_msg, attachment_url='<url to photo goes here>')#comment got posted!
  
