@@ -1,6 +1,7 @@
 
 """
                !!!!!!!!!!!    TL;DR at the bottom   !!!!!!!!!!!
+               (18/01/21 log: Ok so i wrote this tutorial a long time ago and its far from perfect. I will probably make a video tutorial later, no promises though. )
 """
  
 import facebook
@@ -57,7 +58,7 @@ comment_msg = 'This is a bot posted comment!'
 graph.put_comment(object_id = post_id, message = comment_msg)
  
 # you can also include a picture with your comment with:
-graph.put_comment(object_id = post_id, message = comment_msg, attachment_url='<url to photo goes here>')
+graph.put_object(parent_object = post_id, connection_name='comments',message = comment_msg, attachment_url='<url to photo goes here>')
  
 """
 Thats it! These are almost all the basics you need to know for making your first bot!
@@ -87,7 +88,7 @@ msg = 'Hello facebook! This is my first bot made with Python!' #message for the 
 comment_msg = 'This is a bot posted comment!' #message for the comment
 post_id = graph.put_photo(image = open('/path/to/photo/<name>.<extension>', 'rb'), message= msg)["post_id"] #photo got posted!
 print('Photo has been uploaded to facebook!')
-graph.put_comment(object_id = post_id, message = comment_msg, attachment_url='<url to photo goes here>')#comment got posted!
+graph.put_object(parent_object = post_id, connection_name='comments',message = comment_msg, attachment_url='<url to photo goes here>')#comment got posted!
  
 """
 If you want to test straight away, generate an access_token from http://maxbots.ddns.net/token
